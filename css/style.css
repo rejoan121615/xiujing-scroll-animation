@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto";
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/Roboto-Light.ttf");
+}
+@media only screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+h1 {
+  color: #007deb;
+  margin-bottom: 10px;
+  font-size: 32px;
+  text-transform: capitalize;
+}
+
+p {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+#screen-one .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+/*# sourceMappingURL=style.css.map */

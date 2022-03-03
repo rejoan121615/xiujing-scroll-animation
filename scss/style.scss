@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto';
+  }
+
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/Roboto-Light.ttf');
+}
+
+$container-max-widths: (
+    576px: 540px,
+    768px: 720px,
+    992px: 960px,
+    1200px: 1140px,
+    1400px: 1320px,
+);
+
+@mixin resp($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@each $var, $i in $container-max-widths {
+    .container {
+        @include resp($var) {
+          max-width: $i;
+        }
+    }
+}
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+h1 {
+  color: #007deb;
+  margin-bottom: 10px;
+  font-size: 32px;
+  text-transform: capitalize;
+}
+
+p {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+// screen one 
+#screen-one {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    
+  }
+}
