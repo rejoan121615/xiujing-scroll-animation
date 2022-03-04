@@ -61,44 +61,236 @@ p {
 }
 
 section {
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #d3d4d6;
+}
+@media only screen and (min-width: 1200px) {
+  section {
+    height: 100vh;
+  }
+}
+section .container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section .container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+section .container .top-sec {
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 1200px) {
+  section .container .top-sec {
+    margin-bottom: 65px;
+  }
+}
+section .container .top-sec .heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 1200px) {
+  section .container .top-sec .heading {
+    margin-bottom: 20px;
+  }
+}
+section .container .top-sec .heading .round {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #007deb;
+  color: white;
+  font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media only screen and (min-width: 1200px) {
+  section .container .top-sec .heading .round {
+    width: 75px;
+    height: 75px;
+    font-size: 45px;
+  }
+}
+section .container .top-sec .heading h1 {
+  color: black;
+  margin-bottom: 0px;
+  margin-left: 25px;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 1200px) {
+  section .container .top-sec .heading h1 {
+    font-size: 75px;
+  }
+}
+section .container .top-sec .discrip {
+  font-size: 25px;
+}
+@media only screen and (min-width: 1200px) {
+  section .container .top-sec .discrip {
+    font-size: 33px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  section .container .bottom-sec {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+}
+section .container .left,
+section .container .center,
+section .container .right {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+@media only screen and (min-width: 1200px) {
+  section .container .left,
+section .container .center,
+section .container .right {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  section .container .left,
+section .container .center,
+section .container .right {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+section .container .left h1,
+section .container .center h1,
+section .container .right h1 {
+  font-size: 25px;
+}
+section .container .left p,
+section .container .center p,
+section .container .right p {
+  font-size: 18px;
+}
+section .container .left {
+  padding-left: 0px;
+  padding-top: 0px;
+}
+section .container .center {
+  border-top: 2px solid #d3d4d6;
+  border-bottom: 2px solid #d3d4d6;
+}
+@media only screen and (min-width: 1200px) {
+  section .container .center {
+    border-left: 2px solid #d3d4d6;
+    border-right: 2px solid #d3d4d6;
+  }
+}
+section .container .right {
+  padding-bottom: 0px;
+  display: block;
+}
 
-#screen-one .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+.img-grid img {
+  width: 260px;
+  margin-bottom: 20px;
 }
-#screen-one .container .left,
-#screen-one .container .center,
-#screen-one .container .right {
-  padding-left: 30px;
-  padding-right: 30px;
+
+#visualize-two .container p {
+  margin-bottom: 35px;
 }
-#screen-one .container .center {
-  border-left: 2px solid #d3d4d6;
-  border-right: 2px solid #d3d4d6;
+#visualize-two .container img {
+  width: 280px;
 }
-#screen-one .container .right .img-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+#visualize-two .container .bottom-sec .center p {
+  margin-bottom: 80px;
 }
-#screen-one .container .right .img-grid .one {
-  grid-column: 2/3;
-  grid-row: 1/3;
-  align-self: flex-end;
+#visualize-two .container .img-grid .center p {
+  margin-bottom: 70px;
 }
-#screen-one .container .right .img-grid .two {
+#visualize-two .container .img-grid .three {
   grid-column: 1/2;
-  grid-row: 2/4;
-  align-self: center;
+  grid-row: 1/3;
 }
-#screen-one .container .right .img-grid .three {
-  grid-column: 2/3;
-  grid-row: 3/5;
+#visualize-two .container .img-grid .three img {
+  width: 265px;
+}
+
+.control .bottom-sec,
+.illuminate .bottom-sec {
+  display: block;
+}
+.control .bottom-sec .right .img-grid,
+.illuminate .bottom-sec .right .img-grid {
+  display: block;
+  text-align: center;
+}
+.control .bottom-sec .center,
+.illuminate .bottom-sec .center {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.control .right h1,
+.illuminate .right h1 {
+  margin-bottom: 25px;
+}
+.control .right .img-grid,
+.illuminate .right .img-grid {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+}
+.control .right .img-grid .round,
+.illuminate .right .img-grid .round {
+  width: 90px;
+}
+.control .right .img-grid .form,
+.illuminate .right .img-grid .form {
+  width: 220px;
+}
+.control .right .img-grid .three-sq,
+.illuminate .right .img-grid .three-sq {
+  width: 500px;
+}
+.control .three-sq-sm,
+.illuminate .three-sq-sm {
+  width: 180px;
+}
+.control .three-sq-lg,
+.illuminate .three-sq-lg {
+  display: none;
+}
+
+#control-two img {
+  width: 190px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: block;
+}
+#control-two .left img {
+  display: block;
+  width: 135px;
+}
+#control-two .center img {
+  width: 190px;
+}
+
+.illuminate img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+}
+
+#illuminate-one .container .right .img-grid img {
+  margin-bottom: 25px;
+}
+
+#illuminate-two img {
+  margin-top: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

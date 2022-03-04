@@ -1,0 +1,30 @@
+
+// illuminate
+.illuminate {
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 280px;
+    }
+}
+
+
+#illuminate-one {
+    .container {
+        // right side 
+        .right {
+            .img-grid {
+                img {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}
+
+#illuminate-two {
+    img {
+        margin-top: 25px;
+    }
+}
