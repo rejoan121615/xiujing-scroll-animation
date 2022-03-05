@@ -53,6 +53,12 @@
 
 
 #control-two {
+    img {
+        @include resp (1200px) {
+            // display: none!important;
+            opacity: 0;
+        }
+    }
     .bottom-sec {
         @include resp (1200px) {
             grid-template-columns: repeat(4, 1fr);

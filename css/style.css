@@ -257,6 +257,11 @@ section .container .right {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  #visualize-two img {
+    opacity: 0;
+  }
+}
 #visualize-two .container p {
   margin-bottom: 35px;
 }
@@ -337,6 +342,11 @@ section .container .right {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  #control-two img {
+    opacity: 0;
+  }
+}
 @media only screen and (min-width: 1200px) {
   #control-two .bottom-sec {
     grid-template-columns: repeat(4, 1fr);
@@ -465,6 +475,7 @@ section .container .right {
 @media only screen and (min-width: 1200px) {
   #illuminate-two img {
     width: 100%;
+    opacity: 0;
   }
 }
 @media only screen and (min-width: 1200px) {

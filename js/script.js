@@ -106,6 +106,34 @@ function visualImgOneXl() {
         pin: "#visualize-one .bottom-sec .img-grid",
     });
 }
+function visualImgOneLg() {
+    const mainTl = gsap.timeline();
+    const one = gsap.timeline().fromTo(
+        "#visualize-one .img-grid .one",
+        {
+            x: "0",
+            y: "0",
+        },
+        {
+            x: "-508px",
+            y: "-105px",
+            duration: 1,
+        }
+    );
+
+    mainTl.add(one);
+
+    ScrollTrigger.create({
+        animation: mainTl,
+        trigger: "#visualize-one",
+        endTrigger: "#visualize-one",
+        start: "51% center",
+        // end: "100% 0%",
+        scrub: true,
+        // markers: true
+    });
+}
+
 // control timeline ----------------------------------------
 
 function controlXXl() {
@@ -389,6 +417,9 @@ function illuminateXl() {
 }
 
 ScrollTrigger.matchMedia({
+    "(min-width: 992px)": function () {
+        masterTl.add(visualImgOneLg());
+    },
     "(min-width: 1200px)": function () {
         masterTl.add(visualImgOneXl()).add(controlXl()).add(illuminateXl());
     },
