@@ -75,6 +75,7 @@ section {
                 font-size: 25px;
                 @include resp(1200px) {
                     font-size: 33px;
+                    line-height: 45px;
                 }
             }
         }
@@ -83,6 +84,7 @@ section {
             @include resp(1200px) {
                 display: grid;
                 grid-template-columns: 1fr 1fr 2fr;
+                grid-template-rows: 480px;
             }
         }
         .left,
@@ -90,6 +92,10 @@ section {
         .right {
             padding-top: 25px;
             padding-bottom: 25px;
+            @include resp (1200px) {
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
             @include resp(1200px) {
                 padding-left: 25px;
                 padding-right: 25px;
@@ -113,13 +119,18 @@ section {
             border-top: 2px solid $border-color;
             border-bottom: 2px solid $border-color;
             @include resp(1200px) {
+                border: none;
                 border-left: 2px solid #d3d4d6;
                 border-right: 2px solid #d3d4d6;
+
             }
         }
         .right {
             padding-bottom: 0px;
             display: block;
+            @include resp(1200px) {
+                padding-right: 0px;
+            }
         }
     }
 }
@@ -129,5 +140,10 @@ section {
     img {
         width: 260px;
         margin-bottom: 20px;
+    }
+    @include resp (768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
     }
 }

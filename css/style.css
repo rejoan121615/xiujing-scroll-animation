@@ -133,12 +133,14 @@ section .container .top-sec .discrip {
 @media only screen and (min-width: 1200px) {
   section .container .top-sec .discrip {
     font-size: 33px;
+    line-height: 45px;
   }
 }
 @media only screen and (min-width: 1200px) {
   section .container .bottom-sec {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 480px;
   }
 }
 section .container .left,
@@ -146,6 +148,14 @@ section .container .center,
 section .container .right {
   padding-top: 25px;
   padding-bottom: 25px;
+}
+@media only screen and (min-width: 1200px) {
+  section .container .left,
+section .container .center,
+section .container .right {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   section .container .left,
@@ -183,6 +193,7 @@ section .container .center {
 }
 @media only screen and (min-width: 1200px) {
   section .container .center {
+    border: none;
     border-left: 2px solid #d3d4d6;
     border-right: 2px solid #d3d4d6;
   }
@@ -191,10 +202,59 @@ section .container .right {
   padding-bottom: 0px;
   display: block;
 }
+@media only screen and (min-width: 1200px) {
+  section .container .right {
+    padding-right: 0px;
+  }
+}
 
 .img-grid img {
   width: 260px;
   margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .img-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .visualize img {
+    width: 350px !important;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1200px) {
+  .visualize img {
+    width: 280px !important;
+    margin: 0px;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1400px) {
+  .visualize img {
+    width: 320px !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .visualize .one {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    align-self: flex-end;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .visualize .two {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    align-self: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .visualize .three {
+    grid-column: 2/3;
+    grid-row: 3/5;
+  }
 }
 
 #visualize-two .container p {
@@ -231,6 +291,13 @@ section .container .right {
   padding-top: 25px;
   padding-bottom: 25px;
 }
+@media only screen and (min-width: 1200px) {
+  .control .bottom-sec .center,
+.illuminate .bottom-sec .center {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
 .control .right h1,
 .illuminate .right h1 {
   margin-bottom: 25px;
@@ -249,6 +316,12 @@ section .container .right {
 .illuminate .right .img-grid .form {
   width: 220px;
 }
+@media only screen and (min-width: 1200px) {
+  .control .right .img-grid .form,
+.illuminate .right .img-grid .form {
+    width: 190px;
+  }
+}
 .control .right .img-grid .three-sq,
 .illuminate .right .img-grid .three-sq {
   width: 500px;
@@ -257,9 +330,23 @@ section .container .right {
 .illuminate .three-sq-sm {
   width: 180px;
 }
-.control .three-sq-lg,
-.illuminate .three-sq-lg {
-  display: none;
+@media only screen and (min-width: 1200px) {
+  .control .three-sq-sm,
+.illuminate .three-sq-sm {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #control-two .bottom-sec {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #control-two .bottom-sec .right {
+    padding-right: 25px;
+    border-right: 2px solid #d3d4d6;
+  }
 }
 
 #control-two img {
@@ -270,12 +357,57 @@ section .container .right {
   margin-bottom: 15px;
   display: block;
 }
+@media only screen and (min-width: 1200px) {
+  #control-two img {
+    width: 170px;
+  }
+}
 #control-two .left img {
   display: block;
   width: 135px;
 }
-#control-two .center img {
-  width: 190px;
+
+@media only screen and (min-width: 768px) {
+  #control-one .img-grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #control-one .img-grid {
+    justify-content: flex-start;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #control-one .img-grid img {
+    margin-left: initial;
+    margin-right: initial;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #control-one .img-grid .form {
+    margin-left: 25px;
+  }
+}
+#control-one .three-sq-sm {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 1200px) {
+  #control-one .three-sq-sm {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+#control-one .three-sq-sm img {
+  width: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  #control-one .three-sq-sm img {
+    width: 30%;
+    margin-bottom: 0px;
+  }
 }
 
 .illuminate img {
@@ -285,12 +417,66 @@ section .container .right {
   width: 280px;
 }
 
+@media only screen and (min-width: 1200px) {
+  #illuminate-one .container {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #illuminate-one .container .right .img-grid {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #illuminate-one .container .right .img-grid {
+    row-gap: 10px;
+  }
+}
 #illuminate-one .container .right .img-grid img {
   margin-bottom: 25px;
+}
+@media only screen and (min-width: 1200px) {
+  #illuminate-one .container .right .img-grid img {
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #illuminate-one .container .right .img-grid .blur-img {
+    grid-column: span 2;
+    align-self: flex-start;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #illuminate-one .container .right .img-grid .tyers,
+#illuminate-one .container .right .img-grid .cards {
+    width: 47%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #illuminate-one .container .right .img-grid .blur-img {
+    width: 450px;
+    margin-left: initial;
+  }
 }
 
 #illuminate-two img {
   margin-top: 25px;
+}
+@media only screen and (min-width: 1200px) {
+  #illuminate-two img {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #illuminate-two .bottom-sec {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #illuminate-two .right {
+    padding-right: 25px;
+    border-right: 2px solid #d3d4d6;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,3 @@
-
 // illuminate
 .illuminate {
     img {
@@ -9,14 +8,43 @@
     }
 }
 
-
 #illuminate-one {
     .container {
-        // right side 
+        @include resp(1200px) {
+            grid-template-columns: 1fr 1fr 2fr;
+        }
         .right {
             .img-grid {
+                @include resp(768px) {
+                    display: flex;
+                }
+                @include resp(1200px) {
+                    row-gap: 10px;
+                }
                 img {
                     margin-bottom: 25px;
+                    @include resp(1200px) {
+                        margin-bottom: 0px;
+                    }
+                }
+                .blur-img {
+                    @include resp(1200px) {
+                        grid-column: span 2;
+                        align-self: flex-start;
+                    }
+                }
+                .tyers,
+                .cards {
+                    @include resp(1200px) {
+                        width: 47%;
+                    }
+                }
+                .blur-img {
+                    @include resp (1200px) {
+                        width: 450px;
+                        margin-left: initial;
+
+                    }
                 }
             }
         }
@@ -26,5 +54,19 @@
 #illuminate-two {
     img {
         margin-top: 25px;
+        @include resp(1200px) {
+            width: 100%;
+        }
+    }
+    .bottom-sec {
+        @include resp (1200px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    .right {
+        @include resp (1200px) {
+            padding-right: 25px;
+            border-right: 2px solid $border-color;
+        }
     }
 }

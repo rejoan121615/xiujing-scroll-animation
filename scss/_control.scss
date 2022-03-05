@@ -13,6 +13,10 @@
         .center {
             padding-top: 25px;
             padding-bottom: 25px;
+            @include resp (1200px) {
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
         }
     }
     .right {
@@ -29,6 +33,9 @@
             }
             .form {
                 width: 220px;
+                @include resp (1200px) {
+                    width: 190px;
+                }
             }
             .three-sq {
                 width: 500px;
@@ -37,11 +44,29 @@
     }
     .three-sq-sm {
         width: 180px;
-    }
-    .three-sq-lg {
-        display: none;
+        @include resp(1200px) {
+            width: 100%;
+        }
+        
     }
 }
+
+
+#control-two {
+    .bottom-sec {
+        @include resp (1200px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .right {
+            @include resp (1200px) {
+                padding-right: 25px;
+                border-right: 2px solid $border-color;
+            }
+
+        }
+    }
+}
+
 
 #control-two {
     img {
@@ -51,6 +76,9 @@
         margin-top: 15px;
         margin-bottom: 15px;
         display: block;
+        @include resp (1200px) {
+            width: 170px;
+        }
     }
     // left side
     .left {
@@ -60,9 +88,47 @@
         }
     }
     // center side
-    .center {
+    
+}
+
+#control-one {
+    // right side
+
+    .img-grid {
+        @include resp (768px) {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        @include resp (1200px) {
+            justify-content: flex-start;
+        }
         img {
-            width: 190px;
+            @include resp (1200px) {
+                margin-left: initial;
+                margin-right: initial;
+            }
+        }
+        .form {
+            @include resp(1200px) {
+                margin-left: 25px;
+            }
+        }
+    }
+
+    .three-sq-sm {
+        margin-left: auto;
+        margin-right: auto;
+        @include resp(1200px) {
+            display: flex;
+            justify-content: space-between;
+        }
+        img {
+            width: 100%;
+            @include resp (1200px) {
+                width: 30%;
+                margin-bottom: 0px;
+            }
         }
     }
 }

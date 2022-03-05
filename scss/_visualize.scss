@@ -1,34 +1,51 @@
 // visualize one
-#visualize-one,
-#visualize-two {
+.visualize {
     // display: none;
     // child
     // .right {
-        // .img-grid {
-        //     display: block;
-        //     @include resp(1200px) {
-        //         display: grid;
-        //         grid-template-columns: repeat(2, 1fr);
-        //         grid-template-rows: repeat(4, 1fr);
-        //     }
-        //     .one {
-        //         grid-column: 2/3;
-        //         grid-row: 1/3;
-        //         align-self: flex-end;
-        //     }
-        //     .two {
-        //         grid-column: 1/2;
-        //         grid-row: 2/4;
-        //         align-self: center;
-        //     }
-        //     .three {
-        //         grid-column: 2/3;
-        //         grid-row: 3/5;
-        //     }
-        // }
+    // .img-grid {
+    //     display: block;
+    //     @include resp(1200px) {
+    //         display: grid;
+    //         grid-template-columns: repeat(2, 1fr);
+    //         grid-template-rows: repeat(4, 1fr);
+    //     }
+    @include resp(768px) {
+        img {
+            width: 350px!important;
+            @include resp (1200px) {
+                width: 280px!important;
+                margin: 0px;
+            }
+            @include resp (1400px) {
+                width: 320px!important;
+            }
+        }
+        .one {
+            grid-column: 2/3;
+            grid-row: 1/3;
+            align-self: flex-end;
+        }
+        .two {
+            grid-column: 1/2;
+            grid-row: 2/4;
+            align-self: center;
+        }
+        .three {
+            grid-column: 2/3;
+            grid-row: 3/5;
+        }
+    }
+    // }
     // }
 }
 
+#visualize-one {
+    .img-grid {
+        img {
+        }
+    }
+}
 // visualize two
 #visualize-two {
     .container {
