@@ -298,7 +298,7 @@ function controlXl() {
         // end: "100% 0%",
         scrub: true,
         pin: "#control-one .bottom-sec .img-grid",
-        markers: true,
+        // markers: true,
     });
 }
 
@@ -352,7 +352,7 @@ function illuminateXXl() {
         animation: tl,
         trigger: "#illuminate-one",
         endTrigger: "#illuminate-one",
-        markers: true,
+        // markers: true,
         start: "51% center",
         // end: "100% 0%",
         scrub: true,
@@ -408,7 +408,7 @@ function illuminateXl() {
         animation: tl,
         trigger: "#illuminate-one",
         endTrigger: "#illuminate-one",
-        markers: true,
+        // markers: true,
         start: "51% center",
         // end: "100% 0%",
         scrub: true,
